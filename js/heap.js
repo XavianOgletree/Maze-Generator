@@ -1,3 +1,9 @@
+/**
+ * Implementation of a pairing heap.
+ * The lowest value in any given heap will always be
+ * pointed to by Heap::elem;
+ * source: https://en.wikipedia.org/wiki/Pairing_heap
+ */
 class Heap {
     constructor(elem = null, subheaps = []) {
         this.elem = elem;
