@@ -5,6 +5,7 @@ Wikipedia.  I thought it would be fun to make an implementation myself.
 This implementation makes usage of a min-heap to store costs. 
 
 The generator is rather slow on large graphs, but it's better
-than the first one!  The first one was slow *and* used ***gigabytes*** of RAM.
+than the first one I had!  The first one was slow *and* used ***gigabytes*** of RAM.
 
-I'll add some comments Later<sup>tm</sup>
+~~I'll add some comments Later<sup>tm</sup>~~
+I added some.
