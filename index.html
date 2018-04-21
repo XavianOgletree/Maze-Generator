@@ -9,11 +9,11 @@
         <div>
             <div style="text-align: center">
                     <label for="width" >Width: </label>
-                    <input id="width" type="number" min="5" value="10" oninvalid="(() => this.value = '5')();"/>
+                    <input id="width" type="number" min="5" value="10" oninvalid="(() => this.value = this.min)();"/>
                     <label for="height">Height: </label>
-                    <input id="height" type="number" min="5" value="10" oninvalid="(() => this.value = '5')();"/>
+                    <input id="height" type="number" min="5" value="10" oninvalid="(() => this.value = this.min)();"/>
                     <label for="scale">Scale: </label>
-                    <input id="scale" type="number" min="1" value="1" oninvalid="(() => this.value = '1')();"/>
+                    <input id="scale" type="number" min="1" value="1" oninvalid="(() => this.value = this.min)();"/>
                     <button id="generate"> generate </button>
             </div>
             
