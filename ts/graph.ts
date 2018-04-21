@@ -1,16 +1,3 @@
-class Edge {
-    to: number;
-    weight: number;
-    constructor( to: number, weight: number) {
-        this.to = to;
-        this.weight = weight;
-    }
-
-    valueOf() {
-        return this.weight;
-    }
-}
-
 class Graph {
     vertices: number[][];
     size: number;
