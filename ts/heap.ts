@@ -7,14 +7,18 @@
 class Heap<E> {
     elem: E;
     subheaps: Heap<E>[];
-
     constructor(elem: E = null, subheaps: Heap<E>[] = []) {
         this.elem = elem;
         this.subheaps = subheaps;
     }
 
+    private setSize(size: number){
+
+        return this;
+    }
+
     isEmpty() { 
-        return this.subheaps.length === 0 && this.elem === null; 
+        return this.subheaps.length === 0 && (this.elem === null || this.elem === undefined); 
     }
 
     findMin() { 
@@ -33,11 +37,11 @@ class Heap<E> {
     }
 
     insert(elem: E) { 
-        return this.merge(new Heap(elem, [])); 
+        return this.merge(new Heap(elem, []))
     }
    
     deleteMin() { 
-        return Heap.mergePairs(this.subheaps) 
+        return Heap.mergePairs(this.subheaps)
     }
 
     static mergePairs<E>(list: Heap<E>[]) {

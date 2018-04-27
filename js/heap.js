@@ -9,8 +9,11 @@ class Heap {
         this.elem = elem;
         this.subheaps = subheaps;
     }
+    setSize(size) {
+        return this;
+    }
     isEmpty() {
-        return this.subheaps.length === 0 && this.elem === null;
+        return this.subheaps.length === 0 && (this.elem === null || this.elem === undefined);
     }
     findMin() {
         return this.isEmpty() ? null : this.elem;
