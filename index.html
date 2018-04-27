@@ -1,27 +1,42 @@
 <html>
     <head>
-        <script src="js/maze.js"></script>
+        <script src="js/draw.js"></script>
+        <script src="js/prim.js"></script>
         <script src="js/heap.js"></script>
         <script src="js/graph.js"></script>
         <script src="js/main.js" type="text/javascript"></script>
+        <style>
+            .centered {
+                text-align: center;
+            }
+
+            div {
+                margin: 1em auto;
+            }
+        </style>
     </head>
     <body>
         <div>
-            <div style="text-align: center">
+            <div class="centered">
                     <label for="width" >Width: </label>
                     <input id="width" type="number" min="5" value="10" oninvalid="(() => this.value = this.min)();"/>
                     <label for="height">Height: </label>
                     <input id="height" type="number" min="5" value="10" oninvalid="(() => this.value = this.min)();"/>
                     <label for="scale">Scale: </label>
                     <input id="scale" type="number" min="1" value="1" oninvalid="(() => this.value = this.min)();"/>
-                    <button id="generate"> generate </button>
+                    <div class="centered">
+                            <label for="live" >Live: </label>
+                            <input id="live" type="checkbox" checked/>
+                            <button id="generate"> generate </button>
+                    </div>
+                    
             </div>
             
-            <p style="width: 100%; text-align: center;"><canvas id="maze" height="1000" width="1000"></canvas></p>
-            <p style="text-align: center;"><a href="https://github.com/Capital-EX/Maze-Generator">Github Repository</a></p>
+            <div class="centered"><canvas id="maze" height="1000" width="1000"></canvas></div>
+            <p class="centered"><a href="https://github.com/Capital-EX/Maze-Generator">Github Repository</a></p>
         </div>
         <script>
-            run();
+            initialize();
         </script>
     </body>
 </html>
