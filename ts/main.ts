@@ -33,7 +33,7 @@ function initialize() {
         let scale = Number.parseInt(inputs.scale.value);
         clearInterval(state.id);
         if (!inputs.live.checked){
-            drawMaze(prim(Graph.random(width, height)), width, height, scale, canvas);
+            drawMaze(prim(Graph.random(width, height)), height, width,  scale, canvas);
         }
         else {
             state.iter = primIter(Graph.random(width, height));
